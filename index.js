@@ -50,7 +50,7 @@ const PORT = process.env.PORT || 8001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
-    origin: ["http://localhost:3001", "http://localhost:3002", "http://localhost:3003", process.env.CLIENT_URL_1, process.env.CLIENT_URL_2],
+    origin: ["http://localhost:3001", "http://localhost:3002", "http://localhost:3003", process.env.CLIENT_URL_1, process.env.CLIENT_URL_2, process.env.CLIENT_URL_3],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"]
 }));
