@@ -12,7 +12,7 @@ async function EditEvent(req, res) {
         }
 
         const { eventId, eventName, category, pricePerSeat, totalSeats, address, datetime } = req.body;
-        const eventPic = req.file.filename;
+        const eventPic = req.file?.filename;
 
         if (!eventId || !eventName || !category || !pricePerSeat || !totalSeats || !address || !datetime || !eventPic) {
             return res.status(400).json({ success: false, message: "Missing required fields!" });
